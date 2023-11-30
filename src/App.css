@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Cookie|Dancing+Script:400,500,600,700|Indie+Flower|Satisfy&display=swap');
+
+
+
+body {
+  background-color: #f7f7f7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #ffffff;
+  font-size: 60px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container-md {
+  background-image: url("../public/images/watercolor.png");
+  background-position: center;
+  background-size: cover; 
+  background-repeat: no-repeat;  
+  background-attachment: fixed;
+  width: 600px;
+  height: 100%;
+  margin-top: 50px;
+  border-radius: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 span{
+  color: #6e4da5;
+  font-size: 90px;
+}
+
+form input {
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.added-new-task {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Indie Flower', cursive;
+  font-size: 30px;
+  color: #020201;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.to-do-item-name {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.delete-task {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  line-height: 10px;
+}
+
+.delete-task:hover {
+  background-color: #9d98ae5d;
+}
+
+.tasks-text {
+  color: #020201;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #ffffff;
+  outline: none;
+}
+ /* Start of creating a custom checkbox */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color:#eee;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #9f85c9;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #624fe8;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 10px;
+  top: 6px;
+  width: 6px;
+  height: 10px;
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* End of creating a custom checkbox */
+
+.add-new-one {
+  margin-left: 20px;
+  font-weight: bolder;
+  font-size: 25px;
+  background: transparent;
+  color: #020201;
+  width: auto;
+  border: 1px solid #7a62a1;
+}
+
+.btn-secondary:hover {
+  background-color: #9d98aeb7;
+}
+
+footer {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 100px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width:767px) {
+  .container-md {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .contact-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
